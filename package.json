@@ -3,17 +3,18 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://iuriibilonog.github.io/js-project",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js-project/"
+    "build": "parcel build src/*.html --public-url / /",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Tetiana Tarasovych <tetjana.tarasovych.cv@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
@@ -28,6 +29,7 @@
   "dependencies": {
     "axios": "^0.23.0",
     "debounce": "^1.2.1",
+    "netlify-cli": "^9.16.3",
     "notiflix": "^3.1.0"
   }
 }
